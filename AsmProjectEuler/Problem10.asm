@@ -1,6 +1,5 @@
 .code
-Problem7 proc
-	mov r8, 3    ; prime counter reg (we give 3 for free)
+Problem10 proc
 	push 2       ; push 2 onto the stack as first prime to jump-start algorithm
 	mov r9, rsp  ; store where the base of the stack is
 	push 3       ; 3 and 5 also have to get pushed for jump-start
@@ -8,9 +7,12 @@ Problem7 proc
 	mov r10, 3   ; cached sqrt reg
 	mov r11, 9   ; cached square reg
 	mov r12, 5   ; loop counter reg (prime candidate)
+	mov r15, 10  ; sum of primes less than 2 mil
 
 MainLoopHead:
 	add r12, 2 ; increment prime candidate
+	cmp r12, 2000000 ; check if candidate > 2,000,000
+	jg Ending ; if so, jump to ending
 
 	; check to see if cache is still valid
 	cmp r11, r12   ; is cached square >= i
@@ -26,8 +28,8 @@ CacheValid:
 	mov r13, r9  ; grab stack base into counter
 PrimeCheckHead:
 	mov r14, [r13] ; fetch value "x" from stack
-	cmp r14, r10 ; is x > cached sqrt
-	jg IsPrime   ; if so, is prime
+	cmp r14, r10   ; is x > cached sqrt
+	jg IsPrime     ; if so, is prime
 
 	mov rdx, 0   ; clear for division
 	mov rax, r12 ; set divident
@@ -40,15 +42,19 @@ PrimeCheckHead:
 	jmp PrimeCheckHead
 	
 IsPrime:
-	push r12 ; push new prime onto stack
-	inc r8   ; inc counter of total primes
-	cmp r8, 10000 ; if prime count <= 10,000
-	jle MainLoopHead ; if so, keep getting primes
+	add r15, r12  ; add new prime to summation
+	cmp r12, 1500 ; check if latest prime >= 1500  [sqrt(2 mil) = 1414]
+	jge MainLoopHead ; if so, skip adding to stack
 
-	; all primes collected, clean up and return
-	pop rax     ; pop last prime into return reg
-	mov rsp, r9 ; restore stack pointer
-	pop r8      ; pop to finish stack pointer clean-up
+	; latest prime < 1500
+	push r12 ; push new prime onto stack
+	jmp MainLoopHead
+
+Ending:
+	; all primes summated, clean up and return
+	mov rsp, r9  ; restore stack pointer
+	pop r10      ; pop to finish stack pointer clean-up
+	mov rax, r15
 	ret
-Problem7 endp
+Problem10 endp
 end

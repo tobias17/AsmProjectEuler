@@ -41,5 +41,14 @@
     <MASM Include="Problem7.asm">
       <Filter>Source Files</Filter>
     </MASM>
+    <MASM Include="Problem9.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Problem10.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Problem8.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
 </Project>

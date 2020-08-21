@@ -146,12 +146,15 @@
     <MASM Include="Problem1.asm">
       <FileType>Document</FileType>
     </MASM>
+    <MASM Include="Problem10.asm" />
     <MASM Include="Problem2.asm" />
     <MASM Include="Problem3.asm" />
     <MASM Include="Problem4.asm" />
     <MASM Include="Problem5.asm" />
     <MASM Include="Problem6.asm" />
     <MASM Include="Problem7.asm" />
+    <MASM Include="Problem8.asm" />
+    <MASM Include="Problem9.asm" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
