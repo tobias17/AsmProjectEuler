@@ -6,7 +6,7 @@
 
 using namespace std;
 
-#define PROBLEM_NAME Problem10
+#define PROBLEM_NAME Problem12
 
 #define STRINGIZE2(s) #s
 #define STRINGIZE(s) STRINGIZE2(s)

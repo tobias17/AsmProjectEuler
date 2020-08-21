@@ -147,6 +147,8 @@
       <FileType>Document</FileType>
     </MASM>
     <MASM Include="Problem10.asm" />
+    <MASM Include="Problem11.asm" />
+    <MASM Include="Problem12.asm" />
     <MASM Include="Problem2.asm" />
     <MASM Include="Problem3.asm" />
     <MASM Include="Problem4.asm" />
