@@ -3,7 +3,7 @@
 
 using namespace std;
 
-#define PROBLEM_NAME Problem4
+#define PROBLEM_NAME Problem7
 
 extern "C" unsigned long long PROBLEM_NAME();
 

@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\Set1">
-      <UniqueIdentifier>{c2b9577a-ee84-47f9-8d5f-30f0099934b9}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -24,16 +21,25 @@
   </ItemGroup>
   <ItemGroup>
     <MASM Include="Problem1.asm">
-      <Filter>Source Files\Set1</Filter>
+      <Filter>Source Files</Filter>
     </MASM>
     <MASM Include="Problem2.asm">
-      <Filter>Source Files\Set1</Filter>
+      <Filter>Source Files</Filter>
     </MASM>
     <MASM Include="Problem3.asm">
-      <Filter>Source Files\Set1</Filter>
+      <Filter>Source Files</Filter>
     </MASM>
     <MASM Include="Problem4.asm">
-      <Filter>Source Files\Set1</Filter>
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Problem5.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Problem6.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Problem7.asm">
+      <Filter>Source Files</Filter>
     </MASM>
   </ItemGroup>
 </Project>
