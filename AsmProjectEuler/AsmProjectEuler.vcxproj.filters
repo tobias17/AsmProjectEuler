@@ -20,40 +20,46 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="Problem1.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="Problem2.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="Problem3.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="Problem4.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="Problem5.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="Problem6.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="Problem7.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="Problem9.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
     <MASM Include="Problem10.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="Problem8.asm">
       <Filter>Source Files</Filter>
     </MASM>
     <MASM Include="Problem11.asm">
       <Filter>Source Files</Filter>
     </MASM>
     <MASM Include="Problem12.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Problem13.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Problem04.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Problem05.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Problem06.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Problem07.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Problem08.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Problem09.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Problem01.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Problem02.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Problem03.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="Problem14.asm">
       <Filter>Source Files</Filter>
     </MASM>
   </ItemGroup>

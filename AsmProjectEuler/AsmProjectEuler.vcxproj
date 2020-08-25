@@ -121,6 +121,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LargeAddressAware>true</LargeAddressAware>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -143,20 +144,20 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="Problem1.asm">
-      <FileType>Document</FileType>
-    </MASM>
+    <MASM Include="Problem01.asm" />
+    <MASM Include="Problem02.asm" />
+    <MASM Include="Problem03.asm" />
+    <MASM Include="Problem04.asm" />
+    <MASM Include="Problem05.asm" />
+    <MASM Include="Problem06.asm" />
+    <MASM Include="Problem07.asm" />
+    <MASM Include="Problem08.asm" />
+    <MASM Include="Problem09.asm" />
     <MASM Include="Problem10.asm" />
     <MASM Include="Problem11.asm" />
     <MASM Include="Problem12.asm" />
-    <MASM Include="Problem2.asm" />
-    <MASM Include="Problem3.asm" />
-    <MASM Include="Problem4.asm" />
-    <MASM Include="Problem5.asm" />
-    <MASM Include="Problem6.asm" />
-    <MASM Include="Problem7.asm" />
-    <MASM Include="Problem8.asm" />
-    <MASM Include="Problem9.asm" />
+    <MASM Include="Problem13.asm" />
+    <MASM Include="Problem14.asm" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
