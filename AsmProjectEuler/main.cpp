@@ -8,6 +8,7 @@ using namespace std;
 
 #define PROBLEM_NAME Problem14
 #define SOLUTION_VAL 1
+#define ITERS_TO_RUN 1
 
 #define STRINGIZE2(s) #s
 #define STRINGIZE(s) STRINGIZE2(s)
@@ -37,13 +38,26 @@ int main() {
 	vector<int> v;
 	loadResource(&v);
 
-	auto start = chrono::high_resolution_clock::now();
-	unsigned long long ans = FUNCTION_CALL(v.data());
-	auto stop = chrono::high_resolution_clock::now();
-	auto duration = chrono::duration_cast<chrono::microseconds>(stop - start);
+	unsigned long long answer = 0;
+	long long runtime = 0;
 
-	cout << "Answer: " << ans << endl;
-	cout << "Elapsed Time: " << duration.count() / 1000.0 << " ms" << endl;
+	for (int i = 0; i < ITERS_TO_RUN; i++) {
+		auto start = chrono::high_resolution_clock::now();
+		unsigned long long newAnswer = FUNCTION_CALL(v.data());
+		auto stop = chrono::high_resolution_clock::now();
+		runtime += chrono::duration_cast<chrono::microseconds>(stop - start).count();
+		if (i == 0) {
+			answer = newAnswer;
+		} else if (answer != newAnswer) {
+			cout << "Inconsisten answer recieved on iteration " << i + 1 << endl;
+			cout << "Expected: " << answer << ", Actual: " << newAnswer;
+			return 1;
+		}
+	}
+
+	cout << "Answer: " << answer << endl;
+	cout << "Avg Runtime: " << runtime / 1000.0 / ITERS_TO_RUN << " ms" << endl;
+	cout << "Run over " << ITERS_TO_RUN << " iteration" << (ITERS_TO_RUN > 1 ? "s" : "") << endl;
 
 	return 0;
 }

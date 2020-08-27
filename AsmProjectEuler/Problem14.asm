@@ -1,8 +1,5 @@
 extern malloc: proc
 
-.data
-STACK_BASE QWORD 0
-
 .code
 Problem14 proc
 	push rcx
@@ -15,14 +12,14 @@ Problem14 proc
 	; for (i in range(1 mil)) { array[i] = 0 }
 	mov r9, 0
 InitLoopHead:
-	mov DWORD PTR [r8+r9], 0
-	add r9, 4
+	mov QWORD PTR [r8+r9], 0
+	add r9, 8
 	cmp r9, 4000000
 	jl InitLoopHead
 
 
 
-	mov [STACK_BASE], rsp
+	mov r12, rsp
 
 	mov DWORD PTR [r8], 1 ; set chain from 1 = to 1
 	mov r9, 0	; index counter
@@ -102,7 +99,7 @@ CacheTheStack:
 	mov [r8+rax], ecx ; store chain length into cache
 
 	; if (stack pointer >= stack base) { GOTO MainLoopHead }
-	cmp rsp, [STACK_BASE]
+	cmp rsp, r12
 	jge MainLoopHead
 	; else { keep caching the stack }
 	jmp CacheTheStack
@@ -148,8 +145,8 @@ Problem14_Sol_2 proc
 	; for (i in range(1 mil)) { array[i] = 0 }
 	mov r9, 0
 InitLoopHead:
-	mov DWORD PTR [r8+r9], 0
-	add r9, 4
+	mov QWORD PTR [r8+r9], 0
+	add r9, 8
 	cmp r9, 4000000
 	jl InitLoopHead
 
